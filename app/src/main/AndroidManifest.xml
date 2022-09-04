@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.quranapp_android">
+    package="com.example.myquranapp">
 
     <application
         android:allowBackup="true"
@@ -8,10 +8,24 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.QuranAppAndroid">
+        android:theme="@style/Theme.MyQuranApp">
         <activity
-            android:name=".BookActivity"
+            android:name=".ParaText"
             android:exported="false" />
+        <activity
+            android:name=".NavigationDrawerActivity"
+            android:exported="false"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/Theme.MyQuranApp.NoActionBar" />
+        <activity
+            android:name=".SurahActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ParaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AllSurahNamesActivity"
+            android:exported="false"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

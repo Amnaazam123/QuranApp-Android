@@ -4,29 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".AllSurahNamesActivity">
 
-    <Button
-        android:id="@+id/surahIndex"
-        android:layout_width="200dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="236dp"
-        android:padding="15dp"
+    <TextView
+        android:id="@+id/surah"
+        android:layout_width="92dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="48dp"
         android:text="@string/Surah"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/paraIndex"
-        android:layout_width="200dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="20dp"
-        android:padding="15dp"
-        android:text="Para Index"
+    <ListView
+        android:id="@+id/AllSurahList"
+        android:layout_width="322dp"
+        android:layout_height="552dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/surahIndex" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

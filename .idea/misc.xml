@@ -3,10 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Ahmad fraz/Desktop/MC-Repoes/QuranApp-Android/QuranApp-Android/app/src/main/res/layout/activity_book.xml" value="0.22" />
-        <entry key="..\:/Users/Ahmad fraz/Desktop/MC-Repoes/QuranApp-Android/QuranApp-Android/app/src/main/res/layout/activity_header.xml" value="0.209375" />
-        <entry key="..\:/Users/Ahmad fraz/Desktop/MC-Repoes/QuranApp-Android/QuranApp-Android/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/Ahmad fraz/Desktop/MC-Repoes/QuranApp-Android/QuranApp-Android/app/src/main/res/layout/main_menu.xml" value="0.209375" />
+        <entry key="..\:/Users/Ahmad fraz/Downloads/Quran_App-main/Quran_App-main/app/src/main/res/layout/activity_main.xml" value="0.209375" />
+        <entry key="..\:/Users/Ahmad fraz/Downloads/Quran_App-main/Quran_App-main/app/src/main/res/layout/activity_nav_drawer.xml" value="0.209375" />
+        <entry key="..\:/Users/Ahmad fraz/Downloads/Quran_App-main/Quran_App-main/app/src/main/res/layout/activity_navigation_drawer.xml" value="0.22" />
+        <entry key="..\:/Users/Ahmad fraz/Downloads/Quran_App-main/Quran_App-main/app/src/main/res/layout/activity_para.xml" value="0.209375" />
+        <entry key="..\:/Users/Ahmad fraz/Downloads/Quran_App-main/Quran_App-main/app/src/main/res/layout/activity_para_text.xml" value="0.209375" />
+        <entry key="..\:/Users/Ahmad fraz/Downloads/Quran_App-main/Quran_App-main/app/src/main/res/layout/all_surah_names.xml" value="0.209375" />
+        <entry key="..\:/Users/Ahmad fraz/Downloads/Quran_App-main/Quran_App-main/app/src/main/res/layout/app_bar_nav_drawer.xml" value="0.209375" />
+        <entry key="..\:/Users/Ahmad fraz/Downloads/Quran_App-main/Quran_App-main/app/src/main/res/layout/content_nav_drawer.xml" value="0.209375" />
+        <entry key="..\:/Users/Ahmad fraz/Downloads/Quran_App-main/Quran_App-main/app/src/main/res/layout/drawer_for_main_activity.xml" value="0.25" />
+        <entry key="..\:/Users/Ahmad fraz/Downloads/Quran_App-main/Quran_App-main/app/src/main/res/layout/fragment_gallery.xml" value="0.209375" />
+        <entry key="..\:/Users/Ahmad fraz/Downloads/Quran_App-main/Quran_App-main/app/src/main/res/layout/fragment_home.xml" value="0.209375" />
+        <entry key="..\:/Users/Ahmad fraz/Downloads/Quran_App-main/Quran_App-main/app/src/main/res/layout/fragment_slideshow.xml" value="0.209375" />
+        <entry key="..\:/Users/Ahmad fraz/Downloads/Quran_App-main/Quran_App-main/app/src/main/res/layout/header.xml" value="0.209375" />
+        <entry key="..\:/Users/Ahmad fraz/Downloads/Quran_App-main/Quran_App-main/app/src/main/res/layout/nav_header_nav_drawer.xml" value="0.209375" />
+        <entry key="..\:/Users/Ahmad fraz/Downloads/Quran_App-main/Quran_App-main/app/src/main/res/layout/nav_header_navigation_drawer.xml" value="0.25" />
+        <entry key="..\:/Users/Ahmad fraz/Downloads/Quran_App-main/Quran_App-main/app/src/main/res/layout/nav_main.xml" value="0.209375" />
+        <entry key="..\:/Users/Ahmad fraz/Downloads/Quran_App-main/Quran_App-main/app/src/main/res/layout/surah.xml" value="0.209375" />
+        <entry key="..\:/Users/Ahmad fraz/Downloads/Quran_App-main/Quran_App-main/app/src/main/res/layout/surah_customized_view.xml" value="0.209375" />
+        <entry key="..\:/Users/Ahmad fraz/Downloads/Quran_App-main/Quran_App-main/app/src/main/res/layout/surahname.xml" value="0.209375" />
       </map>
     </option>
   </component>
