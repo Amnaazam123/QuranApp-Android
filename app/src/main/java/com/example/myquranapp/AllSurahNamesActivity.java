@@ -25,7 +25,7 @@ public class AllSurahNamesActivity extends AppCompatActivity {
         setContentView(R.layout.drawer_for_main_activity);
 
         ListView AllSurahList = findViewById(R.id.AllSurahList);
-        //recyclerView = findViewById(R.id.recycleView);
+        /*recyclerView = findViewById(R.id.recycleView);*/
 
         DBhelper dbHelper  = new DBhelper(AllSurahNamesActivity.this);
 
@@ -33,6 +33,7 @@ public class AllSurahNamesActivity extends AppCompatActivity {
         Log.d("nameOFSurah", String.valueOf(list.get(1)));
 
         SurahNameAdapter arrayAdapter = new SurahNameAdapter (this,list);
+
         /*recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(AllSurahNamesActivity.this,
                 LinearLayoutManager.VERTICAL,
