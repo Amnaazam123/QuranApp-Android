@@ -27,6 +27,7 @@ public class SurahActivity extends AppCompatActivity {
         TextView name=findViewById(R.id.surahName);
         TextView fullsurah=findViewById(R.id.fullsurah);
 
+
         DBhelper dbHelper  = new DBhelper(SurahActivity.this);
         Intent i =getIntent();
 

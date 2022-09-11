@@ -1,5 +1,7 @@
-/*package com.example.myquranapp;
+package com.example.myquranapp;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.viewHolder> {
+    private Context _context;
+
     private ArrayList<tsurah> surahList;
-    public RecyclerViewAdapter(ArrayList<tsurah> surah) {
+    public RecyclerViewAdapter(Context c,ArrayList<tsurah> surah) {
         this.surahList=surah;
+        this._context=c;
     }
     @NonNull
     @Override
@@ -30,6 +35,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         //holder.Intro.setText(holder.data.getSurahIntro());
         holder.Id.setText(String.valueOf(holder.data.getSurahID()));
         holder.Nazol.setText(holder.data.getNazool());
+
+        int p=position;
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(_context,SurahActivity.class);
+                i.putExtra("index",String.valueOf(p));
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                _context.startActivity(i);
+            }
+        });
 
     }
 
@@ -55,4 +72,3 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
 }
-*/

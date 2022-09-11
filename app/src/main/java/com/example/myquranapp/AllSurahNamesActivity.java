@@ -24,26 +24,26 @@ public class AllSurahNamesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawer_for_main_activity);
 
-        ListView AllSurahList = findViewById(R.id.AllSurahList);
-        /*recyclerView = findViewById(R.id.recycleView);*/
+        //ListView AllSurahList = findViewById(R.id.AllSurahList);
+        recyclerView = findViewById(R.id.recycleView);
 
         DBhelper dbHelper  = new DBhelper(AllSurahNamesActivity.this);
 
         ArrayList<tsurah> list =dbHelper.getAllSurah();
         Log.d("nameOFSurah", String.valueOf(list.get(1)));
 
-        SurahNameAdapter arrayAdapter = new SurahNameAdapter (this,list);
+        //SurahNameAdapter arrayAdapter = new SurahNameAdapter (this,list);
 
-        /*recyclerView.setHasFixedSize(true);
+        recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(AllSurahNamesActivity.this,
                 LinearLayoutManager.VERTICAL,
-                true);
+                false);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new RecyclerViewAdapter(list) ;
-        recyclerView.setAdapter(adapter);*/
+        adapter = new RecyclerViewAdapter(getApplicationContext(),list) ;
+        recyclerView.setAdapter(adapter);
 
-        AllSurahList.setAdapter(arrayAdapter);
+        /*AllSurahList.setAdapter(arrayAdapter);
 
         AllSurahList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -54,9 +54,7 @@ public class AllSurahNamesActivity extends AppCompatActivity {
                 intent.putExtra("index", l + "");
                 intent.putExtra("surahName", s.getSurahNameU());
                 startActivity(intent);
-
-
             }
-        });
+        });*/
     }
 }
