@@ -9,8 +9,9 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewpara"
-        android:layout_width="304dp"
-        android:layout_height="550dp"
+        android:layout_width="303dp"
+        android:layout_height="504dp"
+        android:layout_marginTop="16dp"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -24,6 +25,7 @@
         android:layout_marginTop="56dp"
         android:fontStyle="normal"
         android:fontWeight="600"
+        android:textColor="#000"
         android:text="TextView"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"

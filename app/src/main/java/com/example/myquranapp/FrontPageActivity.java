@@ -28,7 +28,7 @@ public class FrontPageActivity extends AppCompatActivity {
 
         Button surahIndex= findViewById(R.id.surahIndex);
         Button paraIndex=findViewById(R.id.paraIndex);
-        Button seacrh=findViewById(R.id.ssearch);
+
         surahIndex.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,15 +48,6 @@ public class FrontPageActivity extends AppCompatActivity {
             }
         });
 
-        seacrh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent surahIndex=new Intent(FrontPageActivity.this,SearchActivity.class);
-                surahIndex.putExtra("value",String.valueOf(T_index));
-                startActivity(surahIndex);
-            }
-        });
 
         NavigationView navigationView = findViewById(R.id.nav_view2);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {

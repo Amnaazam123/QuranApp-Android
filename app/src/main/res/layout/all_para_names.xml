@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/background"
+    android:background="@drawable/img"
     tools:context=".AllSurahNamesActivity">
 
 
@@ -15,7 +15,7 @@
         android:layout_height="42dp"
         android:layout_marginTop="80dp"
         android:text="@string/ParaIndex"
-        android:textColor="#ffff"
+        android:textColor="@color/black"
         android:textSize="26dp"
         app:fontFamily="sans-serif-medium"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,13 +24,13 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleViewpara"
-        android:layout_width="286dp"
-        android:layout_height="503dp"
+        android:layout_width="279dp"
+        android:layout_height="454dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:textColor="#FEFCFF"
-        android:backgroundTint="#E8E8E8"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="#E8E8E8"
+        android:textColor="#FEFCFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"

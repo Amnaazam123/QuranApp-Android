@@ -40,22 +40,6 @@
         app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/ssearch"
-        android:layout_width="249dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="8dp"
-        android:width="300dp"
-        android:backgroundTint="#251C13"
-        android:padding="15dp"
-        android:radius="10dp"
-        android:text="@string/Search"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.543"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/paraIndex" />
-
     <TextView
         android:id="@+id/molvi"
         android:layout_width="wrap_content"

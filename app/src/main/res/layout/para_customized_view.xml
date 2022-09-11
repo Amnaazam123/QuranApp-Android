@@ -7,10 +7,10 @@
 
     <View
         android:id="@+id/divider3"
-        android:layout_width="432dp"
-        android:layout_height="11dp"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
         android:layout_marginTop="37dp"
-        android:background="#3C3C10"
+        android:background="@color/design_default_color_error"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.964"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +25,7 @@
         android:fontStyle="normal"
         android:fontWeight="400"
         android:text="SurahNameU"
-        android:textColor="#090809"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.747"
@@ -40,7 +40,7 @@
 
         android:backgroundTint="#E8E8E8"
         android:text="TextView"
-        android:textColor="#020202"
+        android:textColor="@color/purple_500"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.79"
         app:layout_constraintStart_toStartOf="parent"

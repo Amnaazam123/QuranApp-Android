@@ -11,12 +11,12 @@
     <View
         android:id="@+id/divider"
 
-        android:background="#9F7B30"
         android:layout_width="395dp"
         android:layout_height="3dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@color/design_default_color_error"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
         android:layout_marginEnd="208dp"
         android:text="No"
         android:textAlignment="center"
-        android:textColor="#FEFCFF"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/paraNameE"
         app:layout_constraintHorizontal_bias="0.0"
@@ -47,7 +47,7 @@
         android:layout_marginTop="16dp"
         android:text="SurahNameU"
 
-        android:textColor="#FEFCFF"
+        android:textColor="@color/design_default_color_error"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/parano"
         app:layout_constraintTop_toTopOf="parent" />
@@ -59,7 +59,7 @@
         android:layout_marginTop="4dp"
         android:text="TextView"
         android:textAlignment="viewEnd"
-        android:textColor="#FEFCFF"
+        android:textColor="@color/purple_500"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.72"
