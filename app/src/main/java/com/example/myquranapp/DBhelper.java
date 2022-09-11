@@ -9,126 +9,26 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class DBhelper extends SQLiteOpenHelper {
-
-    public static final String DBNAME = "QuranDb.db";
-    public static final int DBVERSION = 1;
-    public static final String TABLE_ITEM = "tsurah";
-    SQLiteDatabase mDB;
-
-    public DBhelper(Context context) {
-        super(context,DBNAME,null,DBVERSION);
-        if (!ifDBExists(context)) {
-            if (!copyDBFromAssets(context)) {
-                throw new RuntimeException("Failed to Copy Database From Assets Folder");
-            }
-        }
-        mDB = this.getWritableDatabase();
+    private  String SurahNameE="SurahNameE";
+    public DBhelper(@Nullable Context context)
+    {
+        super(context, "QuranDb.db",null, 1);
     }
+
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+    public void onCreate(SQLiteDatabase db) {
 
     }
+
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
-    private boolean copyDBFromAssets(Context context) {
-        Log.d("CPYDBINFO","Starting attemtpt to cop database from the assets file.");
-        String DBPATH = "data/data/com.example.myquranapp/databases/QuranDb.db";
-        InputStream
-                is;
-        OutputStream
-                os;
-        int buffer_size = 8192;
-        int length = buffer_size;
-        long bytes_read = 0;
-        long bytes_written = 0;
-        byte[] buffer = new byte[length];
-
-        try {
-
-            is = context.getAssets().open(DBNAME);
-        } catch (IOException e) {
-            Log.e("CPYDB FAIL - NO ASSET","Failed to open the Asset file " + DBNAME);
-            e.printStackTrace();
-            return false;
-        }
-
-        try {
-            os = new FileOutputStream(DBPATH);
-        } catch (IOException e) {
-            Log.e("CPYDB FAIL - OPENDB","Failed to open the Database File at " + DBPATH);
-            e.printStackTrace();
-            return false;
-        }
-        Log.d("CPYDBINFO","Initiating copy from asset file" + DBNAME + " to " + DBPATH);
-        while (length >= buffer_size) {
-            try {
-                length = is.read(buffer,0,buffer_size);
-            } catch (IOException e) {
-                Log.e("CPYDB FAIL - RD ASSET",
-                        "Failed while reading in data from the Asset. " +
-                                String.valueOf(bytes_read) +
-                                " bytes read successfully."
-                );
-                e.printStackTrace();
-                return false;
-            }
-            bytes_read = bytes_read + length;
-            try {
-                os.write(buffer,0,buffer_size);
-            } catch (IOException e) {
-                Log.e("CPYDB FAIL - WR ASSET","failed while writing Database File " +
-                        DBPATH +
-                        ". " +
-                        String.valueOf(bytes_written) +
-                        " bytes written successfully.");
-                e.printStackTrace();
-                return false;
-
-            }
-            bytes_written = bytes_written + length;
-        }
-        Log.d("CPYDBINFO",
-                "Read " + String.valueOf(bytes_read) + " bytes. " +
-                        "Wrote " + String.valueOf(bytes_written) + " bytes."
-        );
-        try {
-            os.flush();
-            is.close();
-            os.close();
-        } catch (IOException e ) {
-            Log.e("CPYDB FAIL - FINALISING","Failed Finalising Database Copy. " +
-                    String.valueOf(bytes_read) +
-                    " bytes read." +
-                    String.valueOf(bytes_written) +
-                    " bytes written."
-            );
-            e.printStackTrace();
-            return false;
-        }
-        return true;
-    }
-    private boolean ifDBExists(Context context) {
-        String dbparent = context.getDatabasePath(DBNAME).getParent();
-        File f = context.getDatabasePath(DBNAME);
-        if (!f.exists()) {
-            Log.d("NODB MKDIRS","Database file not found, making directories."); //<<<< remove before the App goes live.
-            File d = new File(dbparent);
-            d.mkdirs();
-            //return false;
-        }
-        return f.exists();
-    }
-    public ArrayList<tsurah> getAllSurah(){
+    public ArrayList<tsurah> getAllSurah(){ //names
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.rawQuery("SELECT * FROM " + "tsurah", null);
@@ -147,10 +47,12 @@ public class DBhelper extends SQLiteOpenHelper {
         return ArrayList;
     }
 
-    public ArrayList<tayah> Surah(int index){
+    public ArrayList<tayah> Surah(int index){ //surah content
 
         SQLiteDatabase db = this.getWritableDatabase();
-        String query = "SELECT *" + " FROM " + "tayah" + " WHERE " + "SuraID" + " = '" + index + "'";
+
+
+        String query = "SELECT *" + " FROM " + "tayah" + " WHERE " + "SuraID" + " =    '" + index + "'   ";
         Cursor data = db.rawQuery(query, null);
 
         ArrayList<tayah> surah = new ArrayList<>();
@@ -164,22 +66,70 @@ public class DBhelper extends SQLiteOpenHelper {
         data.close();
         return  surah;
     }
-
-    public ArrayList<tayah> Para(int index){
-
+    public ArrayList<tayah> getParah(int index){
+        ArrayList<tayah> ayat=new ArrayList<>();
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "SELECT *" + " FROM " + "tayah" + " WHERE " + "ParaID" + " = '" + index + "'";
         Cursor data = db.rawQuery(query, null);
 
-        ArrayList<tayah> para = new ArrayList<>();
 
         if (data.moveToFirst()) {
             do {
-                para.add(new tayah(data.getInt(0), data.getInt(1), data.getInt(2),data.getString(3),data.getString(4),data.getString(5),data.getString(6),data.getString(7),data.getInt(8),data.getInt(9),data.getInt(10)));
+                ayat.add(new tayah(data.getInt(0), data.getInt(1), data.getInt(2),data.getString(3),data.getString(4),data.getString(5),data.getString(6),data.getString(7),data.getInt(8),data.getInt(9),data.getInt(10)));
             } while (data.moveToNext());
 
         }
         data.close();
-        return  para;
+        return  ayat;
     }
+    public ArrayList<tsurah> searchdata(String text){
+        ArrayList<tsurah> ArrayList=new ArrayList<>();
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT * FROM "+ " tsurah " + " WHERE " + SurahNameE.toLowerCase() + " LIKE " + "'%" +""+text.toLowerCase()+""+"%'";
+        Cursor cursor = db.rawQuery(query,null);
+        if (cursor.moveToFirst()) {
+            do {
+
+                ArrayList.add(new tsurah(cursor.getInt(0),cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4)));
+            } while (cursor.moveToNext());
+
+        }
+
+        cursor.close();
+        return ArrayList;
+    }
+
+//    public ArrayList<tayah> getParah(int index){
+//        ArrayList<tayah> ayat=new ArrayList<>();
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        String query = "SELECT *" + " FROM " + "tayah" + " WHERE " + "ParaID" + " = '" + index + "'";
+//        Cursor data = db.rawQuery(query, null);
+//
+//
+//        if (data.moveToFirst()) {
+//            do {
+//                ayat.add(new tayah(data.getInt(0), data.getInt(1), data.getInt(2),data.getString(3),data.getString(4),data.getString(5),data.getString(6),data.getString(7),data.getInt(8),data.getInt(9),data.getInt(10)));
+//            } while (data.moveToNext());
+//
+//        }
+//        data.close();
+//        return  ayat;
+//    }
+//    public ArrayList<para> getAllPara(){
+//
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        String query = "SELECT *" + " FROM " + "tayah" + " WHERE " + "SuraID" + " = '" + index + "'";
+//        Cursor data = db.rawQuery(query, null);
+//
+//        ArrayList<para> para = new ArrayList<>();
+//
+//        if (data.moveToFirst()) {
+//            do {
+//                para.add(new tayah(data.getInt(0), data.getInt(1), data.getInt(2),data.getString(3),data.getString(4),data.getString(5),data.getString(6),data.getString(7),data.getInt(8),data.getInt(9),data.getInt(10)));
+//            } while (data.moveToNext());
+//
+//        }
+//        data.close();
+//        return  para;
+//    }
 }

@@ -4,48 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/content"
     tools:context=".SurahActivity">
 
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="407dp"
-        android:layout_height="397dp"
+    <TextView
+        android:id="@+id/surahName"
+        android:layout_width="wrap_content"
+        android:layout_height="53dp"
+        android:layout_marginTop="48dp"
+        android:text="TextView"
+        android:fontFamily="@font/noorehuda"
+        android:fontStyle="normal"
+        android:fontWeight="600"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/surahList"
+        android:layout_width="302dp"
+        android:layout_height="548dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/img_1" />
-
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="364dp"
-        android:layout_height="502dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/surahName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/fullsurah"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="content"
-                android:textSize="24sp" />
-        </LinearLayout>
-    </ScrollView>
+        app:layout_constraintTop_toBottomOf="@+id/surahName"
+        app:layout_constraintVertical_bias="0.268" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

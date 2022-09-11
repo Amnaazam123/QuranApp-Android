@@ -9,31 +9,34 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button paraIndex;
-    Button surahIndex;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        paraIndex = findViewById(R.id.paraIndex);
-        surahIndex = findViewById(R.id.surahIndex);
-        paraIndex.setOnClickListener(new View.OnClickListener(){
+        Button surahIndex= findViewById(R.id.surahIndex);
+        Button paraIndex=findViewById(R.id.paraIndex);
+
+
+        Intent i=getIntent();
+        int index = Integer.parseInt(i.getStringExtra("value"));
+
+        surahIndex.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this,ParaActivity.class);
-                startActivity(i);
+            public void onClick(View v) {
+                Intent surahIndex=new Intent(MainActivity.this,AllSurahNamesActivity.class);
+                surahIndex.putExtra("value",String.valueOf( index));
+                startActivity(surahIndex);
             }
         });
 
-        surahIndex.setOnClickListener(new View.OnClickListener(){
+        paraIndex.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this,AllSurahNamesActivity.class);
-                startActivity(i);
+            public void onClick(View v) {
+                Intent surahIndex=new Intent(MainActivity.this,AllParaNamesActivity.class);
+                surahIndex.putExtra("value",String.valueOf(index));
+                startActivity(surahIndex);
             }
         });
-
-
     }
 }

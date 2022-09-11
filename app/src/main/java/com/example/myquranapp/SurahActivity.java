@@ -8,15 +8,13 @@ import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.ListIterator;
 
 public class SurahActivity extends AppCompatActivity {
+
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -25,31 +23,42 @@ public class SurahActivity extends AppCompatActivity {
         setContentView(R.layout.surah);
 
         TextView name=findViewById(R.id.surahName);
-        TextView fullsurah=findViewById(R.id.fullsurah);
-
-
+        ListView AllSurahList = findViewById(R.id.surahList);
         DBhelper dbHelper  = new DBhelper(SurahActivity.this);
         Intent i =getIntent();
-
+        String nameE=i.getStringExtra("nameE");
+        String nameU=i.getStringExtra("NameU");
         int index = Integer.parseInt(i.getStringExtra("index"));
-        String namesurah = i.getStringExtra("surahName");
 
+
+        int t_index = Integer.parseInt(i.getStringExtra("value"));
         ArrayList<tayah> list =dbHelper.Surah(index+1);
+        SurahAdapter sura=new SurahAdapter(this,list,t_index);
 
-        String surah = new String();
-        surah="";
-        for (int j = 0; j < list.size(); j++) {
-            tayah t=list.get(j);
-            surah+= t.getArabicText().toString();
-        }
 
-        fullsurah.setText(surah);
-        name.setText(namesurah);
 
-        Typeface typeface=Typeface.createFromAsset(
-                getAssets(),
-                "noorehuda.ttf");
-        fullsurah.setTypeface(typeface);
+//        String namesurah = i.getStringExtra("surahName");
+        AllSurahList.setAdapter(sura);
+        name.setText(nameU);
+//        DBhelper dbHelper  = new DBhelper(SurahActivity.this);
+//        Intent i =getIntent();
+//        int index = Integer.parseInt(i.getStringExtra("index"));
+//
+//
+//        String namesurah = i.getStringExtra("surahName");
+//        ArrayList<tayah> list =dbHelper.Surah(index+1);
+//
+//        String content = new String();
+//        content="";
+//        for (int j = 0; j < list.size(); j++) {
+//            tayah t=list.get(j);
+//            content+= t.getArabicText().toString();
+//            // will print each index as it loops
+//        }
+//
+//        fullsurah.setText(content);
+//        name.setText(namesurah);
 
- }
+
+    }
 }

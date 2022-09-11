@@ -2,71 +2,82 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/surahLayout"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/surahno"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_launcher_background"
+        android:text="No"
+
+        android:textAlignment="center"
+        android:textColor="#FEFCFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.307" />
+
+    <TextView
+        android:id="@+id/SurahNameE"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="NameE"
+
+        android:textColor="#FEFCFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/surahno"
+        app:layout_constraintTop_toTopOf="@+id/surahno" />
+
+    <TextView
+
+        android:id="@+id/Nazool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="Nazool"
+        android:textColor="#FEFCFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/surahno"
+        app:layout_constraintTop_toBottomOf="@+id/SurahNameE" />
 
     <View
-        android:id="@+id/divider"
-        android:layout_width="407dp"
-        android:layout_height="7dp"
-        android:background="@color/black"
+        android:id="@+id/divider3"
+
+        android:background="#9F7B30"
+        android:layout_width="395dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="289dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="parent" />
 
-        <TextView
-            android:id="@+id/SurahNo"
-            android:layout_width="83dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/SurahNameE"
-            android:layout_width="158dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/surahNameU"
-            android:layout_width="106dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TextView" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="144dp"
-        android:layout_height="41dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.44"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.0">
-
-        <TextView
-            android:id="@+id/Nazool"
-            android:layout_width="197dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TextView" />
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/paraname2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="4dp"
+        android:text="SurahNameU"
+        android:textAlignment="viewStart"
+        android:textColor="#FEFCFF"
+        android:textColorHint="@android:color/holo_green_dark"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/Nazool"
+        app:layout_constraintTop_toBottomOf="@+id/SurahNameE" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

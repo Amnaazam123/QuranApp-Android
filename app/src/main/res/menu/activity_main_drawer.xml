@@ -9,12 +9,31 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_sura"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:title="@string/ParaIndex" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_para"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/Surah" />
+
+        <item
+            android:id="@+id/nav_FatehMuhammad"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="FatehMuhammad" />
+
+        <item
+            android:id="@+id/nav_MehmoodHassan"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="MehmoodHassan" />
+        <item
+            android:id="@+id/nav_DrMohsinKhan"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="DrMohsinKhan" />
+
+        <item
+            android:id="@+id/nav_MuftiTakiUsmani"
+            android:icon="@drawable/quran_jph"
+            android:title="Mufti TakiUsmani" />
     </group>
 </menu>

@@ -7,8 +7,10 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+
     <View
         android:id="@+id/divider"
+
         android:background="#9F7B30"
         android:layout_width="395dp"
         android:layout_height="3dp"
@@ -22,9 +24,11 @@
 
     <TextView
         android:id="@+id/parano"
+
         android:layout_width="47dp"
         android:layout_height="33dp"
         android:layout_marginTop="16dp"
+
         android:layout_marginEnd="208dp"
         android:text="No"
         android:textAlignment="center"
@@ -61,4 +65,6 @@
         app:layout_constraintHorizontal_bias="0.72"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/paraNameU" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

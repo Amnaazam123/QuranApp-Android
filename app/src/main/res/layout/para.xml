@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/content"
     tools:context=".ParaActivity">
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewpara"
@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:text="TextView"
+        android:fontFamily="@font/noorehuda"
         android:fontStyle="normal"
         android:fontWeight="600"
         android:textSize="36sp"
