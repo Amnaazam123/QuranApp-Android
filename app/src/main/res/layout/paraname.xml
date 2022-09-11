@@ -33,6 +33,7 @@
         android:text="No"
         android:textAlignment="center"
         android:textColor="@color/black"
+
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/paraNameE"
         app:layout_constraintHorizontal_bias="0.0"
@@ -59,6 +60,8 @@
         android:layout_marginTop="4dp"
         android:text="TextView"
         android:textAlignment="viewEnd"
+        android:fontFamily="@font/noorehuda"
+
         android:textColor="@color/purple_500"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

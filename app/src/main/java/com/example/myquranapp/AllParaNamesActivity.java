@@ -87,7 +87,6 @@ public class AllParaNamesActivity extends AppCompatActivity  {
                 return true;
             }
         });
-//        simpleSearchView.setOnQueryTextListener((SearchView.OnQueryTextListener) this);
 
 
     }

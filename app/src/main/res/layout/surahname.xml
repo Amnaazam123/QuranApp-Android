@@ -73,6 +73,8 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="4dp"
         android:text="SurahNameU"
+        android:fontFamily="@font/noorehuda"
+
         android:textAlignment="viewStart"
         android:textColor="@color/design_default_color_error"
         android:textColorHint="@color/design_default_color_error"

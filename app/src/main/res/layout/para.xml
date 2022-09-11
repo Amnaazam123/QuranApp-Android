@@ -28,6 +28,8 @@
         android:textColor="#000"
         android:text="TextView"
         android:textSize="36sp"
+        android:fontFamily="@font/noorehuda"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toStartOf="parent"

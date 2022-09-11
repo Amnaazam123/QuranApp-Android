@@ -23,6 +23,8 @@
         android:layout_marginTop="16dp"
         android:backgroundTint="#E8E8E8"
         android:fontStyle="normal"
+        android:fontFamily="@font/noorehuda"
+
         android:fontWeight="400"
         android:text="SurahNameU"
         android:textColor="@color/black"
