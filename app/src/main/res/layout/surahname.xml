@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/surahLayout"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
@@ -19,7 +19,7 @@
         android:text="No"
 
         android:textAlignment="center"
-        android:textColor="#FEFCFF"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +34,7 @@
         android:layout_marginStart="8dp"
         android:text="NameE"
 
-        android:textColor="#FEFCFF"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/surahno"
         app:layout_constraintTop_toTopOf="@+id/surahno" />
@@ -47,7 +47,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:text="Nazool"
-        android:textColor="#FEFCFF"
+        android:textColor="@color/purple_500"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/surahno"
         app:layout_constraintTop_toBottomOf="@+id/SurahNameE" />
@@ -55,16 +55,16 @@
     <View
         android:id="@+id/divider3"
 
-        android:background="#9F7B30"
-        android:layout_width="395dp"
+        android:layout_width="452dp"
         android:layout_height="3dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/design_default_color_error"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/paraname2" />
 
     <TextView
         android:id="@+id/paraname2"
@@ -74,8 +74,8 @@
         android:layout_marginTop="4dp"
         android:text="SurahNameU"
         android:textAlignment="viewStart"
-        android:textColor="#FEFCFF"
-        android:textColorHint="@android:color/holo_green_dark"
+        android:textColor="@color/design_default_color_error"
+        android:textColorHint="@color/design_default_color_error"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/Nazool"
         app:layout_constraintTop_toBottomOf="@+id/SurahNameE" />
