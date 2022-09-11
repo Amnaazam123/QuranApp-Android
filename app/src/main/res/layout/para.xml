@@ -4,30 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/content"
+    android:background="@drawable/img"
     tools:context=".ParaActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewpara"
         android:layout_width="304dp"
         android:layout_height="550dp"
-        android:layout_marginBottom="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paranameUU" />
 
     <TextView
         android:id="@+id/paranameUU"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="TextView"
+        android:layout_marginTop="56dp"
         android:fontStyle="normal"
         android:fontWeight="600"
+        android:text="TextView"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerViewpara"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
