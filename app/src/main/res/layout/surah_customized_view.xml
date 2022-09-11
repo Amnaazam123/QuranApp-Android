@@ -23,7 +23,6 @@
             android:id="@+id/surahAyat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/noorehuda"
             android:fontStyle="normal"
             android:fontWeight="400"
             android:text="TextView"

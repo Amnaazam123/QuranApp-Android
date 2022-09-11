@@ -23,7 +23,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:text="TextView"
-        android:fontFamily="@font/noorehuda"
         android:fontStyle="normal"
         android:fontWeight="600"
         android:textSize="36sp"
